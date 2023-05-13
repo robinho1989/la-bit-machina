@@ -1,32 +1,31 @@
+import { ActionButton } from '../actionButton/ActionButton';
 import styles from './drumContainer.module.css';
 export const DrumContainer = () => {
-	const columns = [...Array(16).keys()];
-    console.log(columns)
+	const columns = [...Array(18).keys()];
+
 	const buttonsArr = [
-		{ buttonName: 'kick', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'snare', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'hh open', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'hh closed', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'clap', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'rim', icon: 'srcassetsloud-icon.png' },
-		{ buttonName: 'tom', icon: 'srcassetsloud-icon.png' },
+		{ buttonName: 'kick', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'snare', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'hh open', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'hh closed', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'clap', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'rim', icon: 'src/assets/loud-icon.png' },
+		{ buttonName: 'tom', icon: 'src/assets/loud-icon.png' },
 	];
 	return (
 		<section className={styles.container}>
 			<ul>
-				{buttonsArr.map((element) => {
-					return (
-						<li key={element.buttonName}>
-							<ul>
-                                {columns.map(element=>{
-                                    return <li>
-                                        <button>s</button>
-                                    </li>
-                                })}
-                            </ul>
+				{buttonsArr.map((row) =>
+					columns.map((col) => (
+						<li key={`${row}-${col}`} className='grid-item'>
+							{col === 0 ? (
+								<ActionButton text={row.buttonName} image={row.icon} />
+							) : (
+								<button className={styles.musicButton}></button>
+							)}
 						</li>
-					);
-				})}
+					))
+				)}
 			</ul>
 		</section>
 	);
