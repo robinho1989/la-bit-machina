@@ -1,3 +1,5 @@
 .actionButton{
-    background-color: green;
+    height: 100%;
+    max-width: 160px;
+    width: 100%;
 }
