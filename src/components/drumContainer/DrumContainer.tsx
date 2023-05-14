@@ -5,13 +5,41 @@ export const DrumContainer = () => {
 	const columns = [...Array(18).keys()];
 
 	const buttonsArr = [
-		{ buttonName: 'kick', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'snare', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'hh open', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'hh closed', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'clap', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'rim', icon: 'src/assets/loud-icon.png' },
-		{ buttonName: 'tom', icon: 'src/assets/loud-icon.png' },
+		{
+			buttonName: 'kick',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-kick.aif',
+		},
+		{
+			buttonName: 'snare',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-snare.aif',
+		},
+		{
+			buttonName: 'hh open',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-hh-open.aif',
+		},
+		{
+			buttonName: 'hh closed',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-hh-closed.aif',
+		},
+		{
+			buttonName: 'clap',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-clap.aif',
+		},
+		{
+			buttonName: 'rim',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-rim.aif',
+		},
+		{
+			buttonName: 'tom',
+			icon: 'src/assets/loud-icon.png',
+			musicSrc: 'src/assets/samples/909-tom.aif',
+		},
 	];
 	return (
 		<section className={styles.container}>
@@ -20,7 +48,11 @@ export const DrumContainer = () => {
 					columns.map((col) => (
 						<li key={`${row}-${col}`} className={styles.gridItem}>
 							{col === 0 ? (
-								<ActionButton text={row.buttonName} image={row.icon} />
+								<ActionButton
+									text={row.buttonName}
+									image={row.icon}
+									musicSrc={row.musicSrc}
+								/>
 							) : (
 								<SoundButton />
 							)}
