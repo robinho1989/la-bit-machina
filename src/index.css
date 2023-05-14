@@ -1,5 +1,27 @@
-*{
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body,
+html,
+#root {
+	height: 100%;
+	width: 100%;
+}
+:root {
+	--bodyBacground: #f5f5f5;
+	--firstColor: rgb(253, 252, 253);
+	--secondColor: rgb(249, 248, 250);
+	--thirdColor: rgb(191, 190, 193);
+	--fourthColor: rgb(24, 18, 30);
+	--fifthColor: rgb(132, 42, 221);
+}
+#root {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body {
+	font-family: 'Open Sans', sans-serif;
 }

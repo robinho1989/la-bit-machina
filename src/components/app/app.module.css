@@ -1,3 +1,5 @@
-
-
-
+.appContainer {
+	background-color: var(--secondColor);
+	padding: 40px 140px 100px 140px;
+	width: 100%;
+}

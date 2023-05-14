@@ -22,7 +22,7 @@ export const DrumContainer = () => {
 							{col === 0 ? (
 								<ActionButton text={row.buttonName} image={row.icon} />
 							) : (
-								<SoundButton/>
+								<SoundButton />
 							)}
 						</li>
 					))
