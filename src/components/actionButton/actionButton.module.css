@@ -1,0 +1,20 @@
+.actionButton {
+	background-color: var(--firstColor);
+	border: none;
+	border-radius: 10px;
+	box-shadow: -2px -2px 13px rgba(255, 255, 255, 0.8),
+		5px 5px 13px rgba(0, 0, 0, 0.05);
+	display: inline-flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	padding: 20px;
+	width: 100%;
+}
+.actionButton > p {
+	color: var(--fourthColor);
+	font-size: 13px;
+	font-weight: 500;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
