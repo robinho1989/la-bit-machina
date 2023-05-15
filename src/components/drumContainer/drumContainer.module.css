@@ -8,7 +8,9 @@
 	height: 60px;
 	list-style: none;
 }
-
+.gridItem > button {
+	cursor: pointer;
+}
 @media (min-width: 1200px) {
 	.gridContainer {
 		grid-template-columns: 160px repeat(17, 1fr);
