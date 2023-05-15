@@ -8,37 +8,37 @@ export const DrumContainer = () => {
 		{
 			buttonName: 'kick',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-kick.aif',
+			musicSrc: 'src/assets/samples/909-kick.mp3',
 		},
 		{
 			buttonName: 'snare',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-snare.aif',
+			musicSrc: 'src/assets/samples/909-snare.mp3',
 		},
 		{
 			buttonName: 'hh open',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-hh-open.aif',
+			musicSrc: 'src/assets/samples/909-hh-open.mp3',
 		},
 		{
 			buttonName: 'hh closed',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-hh-closed.aif',
+			musicSrc: 'src/assets/samples/909-hh-closed.mp3',
 		},
 		{
 			buttonName: 'clap',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-clap.aif',
+			musicSrc: 'src/assets/samples/909-clap.mp3',
 		},
 		{
 			buttonName: 'rim',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-rim.aif',
+			musicSrc: 'src/assets/samples/909-rim.mp3',
 		},
 		{
 			buttonName: 'tom',
 			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-tom.aif',
+			musicSrc: 'src/assets/samples/909-tom.mp3',
 		},
 	];
 	return (

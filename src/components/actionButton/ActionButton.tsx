@@ -3,19 +3,17 @@ interface ButtonProps {
 	image: string;
 	musicSrc: string;
 }
+
 import { Howl } from 'howler';
 import styles from './actionButton.module.css';
 
 export const ActionButton = ({ text, image, musicSrc }: ButtonProps) => {
-	const sound = new Howl({
-		src: [musicSrc],
-	});
 	const currentSound = () => {
-		const context = new AudioContext();
-		context.resume().then(() => {
-			sound.play();
+		const sound = new Howl({
+			src: [musicSrc],
 		});
-		// sound.play();
+
+		sound.play();
 	};
 
 	return (
