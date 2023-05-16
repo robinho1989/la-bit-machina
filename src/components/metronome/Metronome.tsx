@@ -16,10 +16,10 @@ export const Metronome = ({ tempo, setTempo }: MetronomeProps) => {
 		<section className={styles.metronomeContainer}>
 			<div className={styles.arrowButtonsContainer}>
 				<button onClick={handleIncreaseTempo}>
-					<img src='src\assets\Triangle-up.png' alt='Arrow up' />
+					<img src='src/assets/Triangle-up.png' alt='Arrow up' />
 				</button>
 				<button onClick={handleDecreaseTempo}>
-					<img src='src\assets\Triangle-down.png' alt='Arrow down' />
+					<img src='src/assets/Triangle-down.png' alt='Arrow down' />
 				</button>
 			</div>
 			<div className={styles.tempoContainer}>
