@@ -1,0 +1,38 @@
+.arrowButtonsContainer {
+	display: flex;
+	flex-direction: column;
+	margin-right: 30px;
+}
+.arrowButtonsContainer > button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.metronomeContainer {
+	background-color: var(--firstColor);
+	box-shadow: inset -2px -2px 13px rgba(255, 255, 255, 0.8),
+		inset 5px 5px 13px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+	padding: 20px;
+}
+.tempoText {
+	color: var(--thirdColor);
+    display: inline-flex;
+    align-items: center;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: 0.12em;
+}
+.tempoText > span {
+	color: var(--fourthColor);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 23px;
+	letter-spacing: 0.1em;
+	margin-right: 10px;
+}
