@@ -5,11 +5,17 @@ import styles from './app.module.css';
 
 export const App = () => {
 	const [tempo, setTempo] = useState(120);
-	console.log(tempo)
+	const [isActive, setIsActive] = useState(false);
+	const [isClicked, setIsClicked] = useState(false);
 	return (
 		<div className={styles.appContainer}>
 			<Metronome tempo={tempo} setTempo={setTempo} />
-			<DrumContainer />
+			<DrumContainer
+				isActive={isActive}
+				setIsAvtive={setIsActive}
+				isClicked={isClicked}
+				setIsClicked={setIsClicked}
+			/>
 		</div>
 	);
 };

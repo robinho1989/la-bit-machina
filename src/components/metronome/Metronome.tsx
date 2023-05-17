@@ -1,9 +1,5 @@
 import styles from './metronome.module.css';
-
-interface MetronomeProps {
-	tempo: number;
-	setTempo: React.Dispatch<React.SetStateAction<number>>;
-}
+import { MetronomeProps } from '../../types/types';
 
 export const Metronome = ({ tempo, setTempo }: MetronomeProps) => {
 	const handleIncreaseTempo = () => {

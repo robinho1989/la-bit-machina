@@ -1,7 +1,14 @@
 import { ActionButton } from '../actionButton/ActionButton';
 import { SoundButton } from '../soundButton/SoundButton';
+import { DrumContainerProps } from '../../types/types';
 import styles from './drumContainer.module.css';
-export const DrumContainer = () => {
+
+export const DrumContainer = ({
+	isActive,
+	setIsAvtive,
+	isClicked,
+	setIsClicked,
+}: DrumContainerProps) => {
 	const columns = [...Array(18).keys()];
 
 	const buttonsArr = [
@@ -54,7 +61,12 @@ export const DrumContainer = () => {
 									musicSrc={row.musicSrc}
 								/>
 							) : (
-								<SoundButton />
+								<SoundButton
+									isActive={isActive}
+									setIsAvtive={setIsAvtive}
+									isClicked={isClicked}
+									setIsClicked={setIsClicked}
+								/>
 							)}
 						</li>
 					))
