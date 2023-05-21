@@ -4,8 +4,6 @@ import { DrumContainerProps } from '../../types/types';
 import styles from './drumContainer.module.css';
 
 export const DrumContainer = ({
-	isActive,
-	setIsAvtive,
 	isClicked,
 	setIsClicked,
 }: DrumContainerProps) => {
@@ -62,8 +60,7 @@ export const DrumContainer = ({
 								/>
 							) : (
 								<SoundButton
-									isActive={isActive}
-									setIsAvtive={setIsAvtive}
+									
 									isClicked={isClicked}
 									setIsClicked={setIsClicked}
 								/>

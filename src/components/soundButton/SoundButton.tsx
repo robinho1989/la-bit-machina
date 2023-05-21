@@ -1,27 +1,24 @@
-import { useEffect } from 'react';
 import { DrumContainerProps } from '../../types/types';
 import styles from './soundButton.module.css';
 
 export const SoundButton = ({
-	isActive,
-	setIsAvtive,
 	isClicked,
 	setIsClicked,
 }: DrumContainerProps) => {
-	useEffect(() => {
-		setIsAvtive(true);
-	}, [isClicked]);
-	const handleActiveState = (e: React.MouseEvent<HTMLButtonElement>) => {
-		setIsClicked(!isClicked);
+	const buttonClass = `${styles.musicButton} ${
+		isClicked ? styles.active : styles.disActive
+	}`;
 
-		isActive
-			? (e.currentTarget.className = `${styles.musicButton} ${styles.active}`)
-			: (e.currentTarget.className = `${styles.musicButton} ${styles.disActive}`);
+	const handleActive = (e: React.MouseEvent<HTMLButtonElement>) => {
+		// console.log(e.currentTarget);
+
+		setIsClicked((prev) => !prev);
+		e.currentTarget.className = buttonClass;
 	};
-
+	
 	return (
 		<button
-			onClick={(e) => handleActiveState(e)}
+			onClick={handleActive}
 			className={`${styles.musicButton} ${styles.disActive}`}
 		></button>
 	);

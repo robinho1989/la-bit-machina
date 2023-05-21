@@ -1,9 +1,4 @@
-interface ButtonProps {
-	text: string;
-	image: string;
-	musicSrc: string;
-}
-
+import { ButtonProps } from '../../types/types';
 import { Howl } from 'howler';
 import styles from './actionButton.module.css';
 
