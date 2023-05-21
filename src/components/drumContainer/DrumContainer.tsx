@@ -1,51 +1,13 @@
 import { ActionButton } from '../actionButton/ActionButton';
 import { SoundButton } from '../soundButton/SoundButton';
 import { DrumContainerProps } from '../../types/types';
+import { columns, buttonsArr } from '../../data/data';
 import styles from './drumContainer.module.css';
 
 export const DrumContainer = ({
 	isClicked,
 	setIsClicked,
 }: DrumContainerProps) => {
-	const columns = [...Array(18).keys()];
-
-	const buttonsArr = [
-		{
-			buttonName: 'kick',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-kick.mp3',
-		},
-		{
-			buttonName: 'snare',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-snare.mp3',
-		},
-		{
-			buttonName: 'hh open',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-hh-open.mp3',
-		},
-		{
-			buttonName: 'hh closed',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-hh-closed.mp3',
-		},
-		{
-			buttonName: 'clap',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-clap.mp3',
-		},
-		{
-			buttonName: 'rim',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-rim.mp3',
-		},
-		{
-			buttonName: 'tom',
-			icon: 'src/assets/loud-icon.png',
-			musicSrc: 'src/assets/samples/909-tom.mp3',
-		},
-	];
 	return (
 		<section className={styles.container}>
 			<ul className={styles.gridContainer}>
@@ -60,7 +22,6 @@ export const DrumContainer = ({
 								/>
 							) : (
 								<SoundButton
-									
 									isClicked={isClicked}
 									setIsClicked={setIsClicked}
 								/>
