@@ -1,31 +1,33 @@
 import { ActionButton } from '../actionButton/ActionButton';
 import { SoundButton } from '../soundButton/SoundButton';
 import { columns } from '../../data/data';
-import styles from './track.module.css'
+import styles from './track.module.css';
+import { SetStateAction } from 'react';
 interface TrackProps {
 	buttonName: string;
 	iconSrc: string;
 	musicSrc: string;
 	isClicked: boolean;
-	setIsClicked: () => void;
+	setIsClicked: React.Dispatch<SetStateAction<boolean>>;
 }
 
 export const Track = (props: TrackProps) => {
 	return (
-		<div>
-			{columns.map(() => {
+		<li className={styles.gridContainer}>
+			<ActionButton
+				text={props.buttonName}
+				image={props.iconSrc}
+				musicSrc={props.musicSrc}
+			/>
+			{columns.map((_, index) => {
 				return (
-					<li key={props.buttonName} className={styles.gridItem}>
-						<ActionButton
-							text={props.buttonName}
-							image={props.iconSrc}
-							musicSrc={props.musicSrc}
-						/>
-
-						<SoundButton isClicked={props.isClicked} setIsClicked={props.setIsClicked} />
-					</li>
+					<SoundButton
+						key={index}
+						isClicked={props.isClicked}
+						setIsClicked={props.setIsClicked}
+					/>
 				);
 			})}
-		</div>
+		</li>
 	);
 };
