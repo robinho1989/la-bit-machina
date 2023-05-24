@@ -5,9 +5,12 @@ interface DrumContainerProps {
 	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
 }
 interface SoundButtonProps {
+	active:boolean
 	index: number;
 	isClicked: boolean;
 	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
+	isActiveButtons: ButtonStatusArray[];
+	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
 }
 interface MetronomeProps {
 	tempo: number;
@@ -24,6 +27,8 @@ interface TrackProps {
 	musicSrc: string;
 	isClicked: boolean;
 	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
+	isActiveButtons: ButtonStatusArray[];
+	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
 }
 interface ButtonStatusArray {
 	isActive: boolean;

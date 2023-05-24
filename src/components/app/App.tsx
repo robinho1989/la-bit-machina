@@ -11,7 +11,7 @@ export const App = () => {
 	const [isActiveButtons, setIsActiveButtons] = useState<ButtonStatusArray[]>([
 		...buttonStatusArray,
 	]);
-
+	
 	return (
 		<div className={styles.appContainer}>
 			<Metronome tempo={tempo} setTempo={setTempo} />

@@ -6,6 +6,8 @@ import styles from './drumContainer.module.css';
 export const DrumContainer = ({
 	isClicked,
 	setIsClicked,
+	isActiveButtons,
+	setIsActiveButtons
 }: DrumContainerProps) => {
 	return (
 		<section className={styles.container}>
@@ -18,6 +20,8 @@ export const DrumContainer = ({
 						musicSrc={row.musicSrc}
 						isClicked={isClicked}
 						setIsClicked={setIsClicked}
+						isActiveButtons={isActiveButtons}
+						setIsActiveButtons={setIsActiveButtons}
 					/>
 				))}
 			</ul>

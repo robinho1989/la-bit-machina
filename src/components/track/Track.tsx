@@ -15,13 +15,16 @@ export const Track = (props: TrackProps) => {
 				image={props.iconSrc}
 				musicSrc={props.musicSrc}
 			/>
-			{buttonStatusArray.map((_, index) => {
+			{props.isActiveButtons.map((button, index) => {
 				return (
 					<SoundButton
+						active={button.isActive}
 						key={index}
 						index={index}
 						isClicked={props.isClicked}
 						setIsClicked={props.setIsClicked}
+						isActiveButtons={props.isActiveButtons}
+						setIsActiveButtons={props.setIsActiveButtons}
 					/>
 				);
 			})}
