@@ -1,6 +1,6 @@
 .gridContainer {
 	display: grid;
-	grid-template-columns: 100px repeat(17, 1fr);
+	grid-template-columns: 100px repeat(16, 1fr);
     gap: 10px;
 }
 .gridContainer > button {
@@ -9,6 +9,6 @@
 }
 @media (min-width: 1200px) {
 	.gridContainer {
-		grid-template-columns: 160px repeat(17, 1fr);
+		grid-template-columns: 160px repeat(16, 1fr);
 	}
 }

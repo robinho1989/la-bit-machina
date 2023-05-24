@@ -1,5 +1,7 @@
-const columns = [...Array(18).keys()];
+// const columns = [...Array(17).keys()];
 
+const buttonStatus = { isActive: false };
+const buttonStatusArray = new Array(17).fill(buttonStatus);
 const buttonsArr = [
 	{
 		buttonName: 'kick',
@@ -37,4 +39,4 @@ const buttonsArr = [
 		musicSrc: 'src/assets/samples/909-tom.mp3',
 	},
 ];
-export { columns, buttonsArr };
+export { buttonStatusArray, buttonsArr };

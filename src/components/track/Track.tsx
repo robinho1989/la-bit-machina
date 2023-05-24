@@ -1,17 +1,13 @@
 import { ActionButton } from '../actionButton/ActionButton';
 import { SoundButton } from '../soundButton/SoundButton';
-import { columns } from '../../data/data';
+import { TrackProps } from '../../types/types';
+import { buttonStatusArray } from '../../data/data';
 import styles from './track.module.css';
-import { SetStateAction } from 'react';
-interface TrackProps {
-	buttonName: string;
-	iconSrc: string;
-	musicSrc: string;
-	isClicked: boolean;
-	setIsClicked: React.Dispatch<SetStateAction<boolean>>;
-}
 
 export const Track = (props: TrackProps) => {
+	// const buttonStatus = { isActive: false };
+	// const buttonStatusArray = new Array(17).fill(buttonStatus);
+	// console.log(buttonStatusArray);
 	return (
 		<li className={styles.gridContainer}>
 			<ActionButton
@@ -19,10 +15,11 @@ export const Track = (props: TrackProps) => {
 				image={props.iconSrc}
 				musicSrc={props.musicSrc}
 			/>
-			{columns.map((_, index) => {
+			{buttonStatusArray.map((_, index) => {
 				return (
 					<SoundButton
 						key={index}
+						index={index}
 						isClicked={props.isClicked}
 						setIsClicked={props.setIsClicked}
 					/>
