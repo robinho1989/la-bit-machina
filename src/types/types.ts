@@ -5,9 +5,10 @@ interface DrumContainerProps {
 	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
 }
 interface SoundButtonProps {
-	active:boolean
+	active: boolean;
 	index: number;
 	isClicked: boolean;
+	rowIndex: number;
 	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
 	isActiveButtons: ButtonStatusArray[];
 	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
@@ -25,6 +26,7 @@ interface TrackProps {
 	buttonName: string;
 	iconSrc: string;
 	musicSrc: string;
+	rowIndex: number;
 	isClicked: boolean;
 	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
 	isActiveButtons: ButtonStatusArray[];

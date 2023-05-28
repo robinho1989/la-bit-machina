@@ -12,10 +12,11 @@ export const DrumContainer = ({
 	return (
 		<section className={styles.container}>
 			<ul>
-				{buttonsArr.map((row) => (
+				{buttonsArr.map((row,rowIndex) => (
 					<Track
 						key={row.buttonName}
 						buttonName={row.buttonName}
+						rowIndex={rowIndex}
 						iconSrc={row.icon}
 						musicSrc={row.musicSrc}
 						isClicked={isClicked}

@@ -4,6 +4,7 @@ import styles from './soundButton.module.css';
 export const SoundButton = ({
 	active,
 	index,
+	rowIndex,
 	isClicked,
 	setIsClicked,
 	isActiveButtons,
@@ -21,6 +22,7 @@ export const SoundButton = ({
 			}
 		});
 		setIsActiveButtons(newArray);
+		console.log(rowIndex)
 		// console.log(e.currentTarget);
 		// console.log(index, isActiveButtons);
 		setIsClicked((prev) => !prev);

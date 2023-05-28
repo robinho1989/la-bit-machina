@@ -24,6 +24,7 @@ export const Track = (props: TrackProps) => {
 						isClicked={props.isClicked}
 						setIsClicked={props.setIsClicked}
 						isActiveButtons={props.isActiveButtons}
+						rowIndex={props.rowIndex}
 						setIsActiveButtons={props.setIsActiveButtons}
 					/>
 				);
