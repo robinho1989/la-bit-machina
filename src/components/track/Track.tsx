@@ -1,7 +1,7 @@
 import { ActionButton } from '../actionButton/ActionButton';
 import { SoundButton } from '../soundButton/SoundButton';
 import { TrackProps } from '../../types/types';
-import { buttonStatusArray } from '../../data/data';
+import { columns } from '../../data/data';
 import styles from './track.module.css';
 
 export const Track = (props: TrackProps) => {
@@ -15,17 +15,14 @@ export const Track = (props: TrackProps) => {
 				image={props.iconSrc}
 				musicSrc={props.musicSrc}
 			/>
-			{props.isActiveButtons.map((button, index) => {
+			{columns.map((button, index) => {
 				return (
 					<SoundButton
-						active={button.isActive}
+						state={props.state}
+						dispatch={props.dispatch}
 						key={index}
-						index={index}
-						isClicked={props.isClicked}
-						setIsClicked={props.setIsClicked}
-						isActiveButtons={props.isActiveButtons}
-						rowIndex={props.rowIndex}
-						setIsActiveButtons={props.setIsActiveButtons}
+						note={index}
+						trackName={props.buttonName}
 					/>
 				);
 			})}

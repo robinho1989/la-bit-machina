@@ -1,26 +1,28 @@
 import { DrumContainer } from '../drumContainer/DrumContainer';
 import { Metronome } from '../metronome/Metronome';
-import { useState } from 'react';
-import { buttonStatusArray } from '../../data/data';
-import { ButtonStatusArray } from '../../types/types';
-import styles from './app.module.css';
+import { useState, useReducer } from 'react';
 
+import styles from './app.module.css';
+import { Action, AppState } from '../../types/types';
+
+
+const reducer = (state: AppState, action: Action) => {
+	switch (action.type) {
+		case 'toggleNote':
+			return  { trackName: action.payloadTrack, note: action.payloadNote} ;
+		default:
+			throw new Error('Something went wrong');
+	}
+};
 export const App = () => {
+	const initialValue = { trackName: '', note: null };
+	const [state, dispatch] = useReducer(reducer, initialValue);
 	const [tempo, setTempo] = useState(120);
-	const [isClicked, setIsClicked] = useState(false);
-	const [isActiveButtons, setIsActiveButtons] = useState<ButtonStatusArray[]>([
-		...buttonStatusArray,
-	]);
-	
+
 	return (
 		<div className={styles.appContainer}>
 			<Metronome tempo={tempo} setTempo={setTempo} />
-			<DrumContainer
-				isClicked={isClicked}
-				setIsClicked={setIsClicked}
-				isActiveButtons={isActiveButtons}
-				setIsActiveButtons={setIsActiveButtons}
-			/>
+			<DrumContainer state={state} dispatch={dispatch} />
 		</div>
 	);
 };

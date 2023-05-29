@@ -1,17 +1,12 @@
 interface DrumContainerProps {
-	isClicked: boolean;
-	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
-	isActiveButtons: ButtonStatusArray[];
-	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
+	state: AppState;
+	dispatch: React.Dispatch<Action>;
 }
 interface SoundButtonProps {
-	active: boolean;
-	index: number;
-	isClicked: boolean;
-	rowIndex: number;
-	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
-	isActiveButtons: ButtonStatusArray[];
-	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
+	note: number;
+	state: AppState;
+	dispatch: React.Dispatch<Action>;
+	trackName: string;
 }
 interface MetronomeProps {
 	tempo: number;
@@ -27,15 +22,25 @@ interface TrackProps {
 	iconSrc: string;
 	musicSrc: string;
 	rowIndex: number;
-	isClicked: boolean;
-	setIsClicked: React.Dispatch<React.SetStateAction<boolean>>;
-	isActiveButtons: ButtonStatusArray[];
-	setIsActiveButtons: React.Dispatch<React.SetStateAction<ButtonStatusArray[]>>;
+	state: AppState;
+	dispatch: React.Dispatch<Action>;
 }
 interface ButtonStatusArray {
 	isActive: boolean;
 }
+
+interface AppState {
+	trackName: string;
+	note: null | number;
+}
+interface Action {
+	type: 'toggleNote';
+	payloadTrack: string;
+	payloadNote: null | number;
+}
 export type {
+	AppState,
+	Action,
 	DrumContainerProps,
 	MetronomeProps,
 	ButtonProps,
